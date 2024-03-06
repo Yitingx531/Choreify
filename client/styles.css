@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(117deg, rgba(70, 129, 137, 0.10) 9.51%, rgba(7, 87, 98, 0.10) 95.18%), #FFF;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    letter-spacing: .5px;
 }
 
 #swimLanes {
@@ -16,7 +16,7 @@ body {
 #lane {
     /* border: 1px solid black; */
     border-radius: 10px;
-    background: #FFF;
+    /* background: #FFF; */
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
     display: flex;
     /* width: 258px; */
@@ -26,27 +26,108 @@ body {
     /* gap: 28px; */
 }
 
-button {
-    width: 100%;
-    background-color: lightblue;
-    /* color: white; */
+body #login-page {
+    background-image: url('./public/assets/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-form {
+#log_in_card {
+    width: 18%;
+    height: 26rem;
+    margin-right: auto;
+    margin-left: auto;
+    background: #cddfeb;
+    padding: 4rem;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	border-radius: 30px;
+	box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#log_in_card form {
+margin-bottom: 1rem;
+}
+
+#log_in_card p{
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: rgb(44, 44, 44);
+}
+
+#log_in_card input {
+    width: 90%;
+    outline: none;
+    border: none;
+    &::placeholder {
+        color: hsl(0, 1%, 48%);
+        font-size: .9rem;
+    }
+}
+
+#username, #password {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
     display: flex;
     flex-direction: column;
+    gap: 0.5em;
+    border-radius: 15px;	
 }
 
-label {
+#signIn_signUp {
     display: flex;
-    flex-direction: column;
-    padding: 2px;
+    justify-content: space-around;
+    padding: 1rem;
 }
 
-input {
+#signIn_signUp
+#signIn_btn,
+#signIn_signUp
+#signUp_btn {
+    width: 35%;
+    padding: 1em;
+    background: #7aa2b7;
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+#signIn_signUp
+#signIn_btn:hover,
+#signIn_signUp
+#signUp_btn:hover {
+    background-color:  #54707f;
+    text-decoration: none;
+}
+#google_oAuth {
     display: flex;
-    padding: 2px;
-    /* border: 1px solid black; */
+    justify-content: space-around;
+}
+
+#log_in_card a{
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer; 
+    align-self: center;
+    margin-bottom: 1.5rem;
+    color:rgb(44, 44, 44);
+}
+
+#log_in_card a:hover {
+    text-decoration:underline;
 }
 
 #newGroupPage {

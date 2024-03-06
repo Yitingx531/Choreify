@@ -42,5 +42,5 @@ function CustomLink({ to, children, ...props }) {
 }
 
 function ApplicationAndLogo() {
-  return <img className={styles.logo} src="../public/assets/logo.jpg" />;
+  return <img className={styles.logo} src="../public/assets/logo.jpg" />
 }

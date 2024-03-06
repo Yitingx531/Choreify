@@ -1,41 +1,28 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import GoogleOAuthButton from "../components/GoogleOAuthButton.jsx";
-import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  // function handleClick() {
-  //   navigate("/home");
-  // }
-
-  // useEffect(() => {
-  // dispatch(
-  //   addLoggedUser({
-  //     username: name,
-  //     email: email,
-  //     profile_picture: profilePic,
-  //   })
-  // );
-
-  //   const newUser = usePostNewUserMutation({
-  //     username: "test",
-  //     email: "testemail",
-  //     profile_picture:
-  //       "https://lh3.googleusercontent.com/a/ACg8ocL2FBrj9ojOtjMTOw7g3bv1dOymA_FpG4J2a8uk-Y3M65E=s96-c",
-  //   });
-  // }, [user]);
 
   return (
-    <div>
-      <div>
-        <h1>Login here:</h1>
-        <GoogleOAuthButton />
-        {/* <button onClick={handleClick}>Login in with Google</button>; */}
+    <body id='login-page' style={{height: '100vh'}}>
+      <div id='log_in_card'>
+        <form id='login_form'>
+            <p for="username">Username</p>
+            <input type="text" id="username" placeholder="username or email"/>
+            <p for="password">Password</p>
+            <input type="text" id="password" placeholder="··················"/>
+        </form>
+     
+        <div id='signIn_signUp'>
+        <Link to='/home' id='signIn_btn'><span>Sign In</span></Link>
+        <Link to='/' id='signUp_btn'><span>Sign Up</span></Link>
+        </div>
+
+        <a id='forgot_password' href="https://www.w3schools.com">Forgot password?</a>
+            <GoogleOAuthButton/>
       </div>
-    </div>
+      </body>
   );
 }
 

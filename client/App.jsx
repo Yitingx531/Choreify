@@ -15,7 +15,6 @@ import styles from "./stylesheets/App.module.css";
 export default function App() {
   return (
     <div className={styles.appContainer}>
-      <Navbar />
       <div>
         <Routes>
           <Route path="/" element={<LoginPage />} />
@@ -26,7 +25,7 @@ export default function App() {
           <Route path="/createNewGroup" element={<NewGroupPage />} />
         </Routes>
       </div>
-      {/* <MainContainer /> */}
+
     </div>
-  );
+  )
 }

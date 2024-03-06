@@ -1,39 +1,45 @@
 import React from "react";
-// import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-// import { auth } from "./auth/firebase";
-import { signInWithGoogle } from "../containers/authentication/firebase";
-import { useDispatch } from "react-redux";
-import { addLoggedUser } from "../redux/slices/usersSlice";
-import { store } from "../redux/store";
-import { usePostNewUserMutation } from "../redux/api/users/usersApi";
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import GoogleButton from 'react-google-button'
 
 export default function GoogleOAuthButton() {
-  const dispatch = useDispatch();
-  const postNewUserMutation = usePostNewUserMutation();
+  const clientId = '1046983712196-lt9kniehbbavberjafatgcss6cp9hlkt.apps.googleusercontent.com';
 
-  async function handleLogin() {
-    let signIn = await signInWithGoogle();
+  const onLogInSuccess = (res) => {
+    console.log('Login success', res.profileObj);
+  };
+  const onFailure = (res) => {
+    console.log('Login failed! res:', res);
+  };
 
-    console.log(`in handle login `, await signIn);
-
-    let newUser = await fetch("/api/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(signIn),
-    });
-
-    console.log("newUser ", newUser);
-    // const mutationResult = await postNewUserMutation.mutate(signIn);
-    // // fetch("/ai/users", { method: "POST", body: JSON.stringify(signIn) });
-    // const { data } = mutationResult;
-    // // console.log(`new user data: `, data);
-    // store.dispatch(addLoggedUser(signIn));
-    dispatch(addLoggedUser(signIn));
+  const onLogOutSuccess = () => {
+    console.log('Log out successfull');
   }
+  
 
   return (
-    <div>
-      <button onClick={handleLogin}>Sign in with Google</button>;
+    <div id="google_oAuth">
+    <div >
+      <GoogleLogin
+      clientId={clientId}
+      render={renderProps => (
+        <GoogleButton onClick={renderProps.onClick} disabled={renderProps.disabled}>
+          Sign in with Google
+          </GoogleButton>
+      )}
+      onSuccess={onLogInSuccess}
+      onFailure={onFailure}
+      cookiePolicy={"single_host_origin"}
+      isSignedIn={true}
+      />
+    </div>
+    {/* <div>
+      <GoogleLogout
+      clientId={clientId}
+      buttonText = 'Log Out'
+      onLogoutSuccess={onLogOutSuccess}
+      />
+    </div> */}
     </div>
   );
 }
