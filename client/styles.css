@@ -27,7 +27,7 @@ body {
 }
 
 body #login-page {
-    background-image: url('./public/assets/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
+    background-image: url('./public/assets/SL-120722-54440-04.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,9 +40,7 @@ body #login-page {
 #log_in_card {
     width: 18%;
     height: 26rem;
-    margin-right: auto;
-    margin-left: auto;
-    background: #cddfeb;
+    background: #dbe8f0;
     padding: 4rem;
 	display: flex;
 	flex-direction: column;
@@ -65,8 +63,9 @@ margin-bottom: 1rem;
 }
 
 #log_in_card input {
-    width: 90%;
+    width: 95%;
     outline: none;
+    line-height: 1.2rem;
     border: none;
     &::placeholder {
         color: hsl(0, 1%, 48%);
@@ -86,15 +85,14 @@ margin-bottom: 1rem;
 
 #signIn_signUp {
     display: flex;
-    justify-content: space-around;
-    padding: 1rem;
+    justify-content: space-between;
 }
 
 #signIn_signUp
 #signIn_btn,
 #signIn_signUp
 #signUp_btn {
-    width: 35%;
+    width: 32%;
     padding: 1em;
     background: #7aa2b7;
     color: hsl(0, 0%, 100%);
