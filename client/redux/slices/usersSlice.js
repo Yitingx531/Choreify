@@ -1,11 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-/* 
-Redux Toolkit automatically infers actions
-So here, we only define slices. Slices are objects that deal with a particular part of our store.
-Inside the slider we create the reducers (update the part of the state regarding this slice), define the actions and the selectors (functionality to access the data).
-*/
-
 export const usersSlice = createSlice({
   name: "users",
   initialState: {

@@ -1,4 +1,4 @@
-const db = require("../models/choreifyModels");
+const db = require("../models/connectToDB");
 const queries = require("../models/queries");
 
 const usersController = {};
