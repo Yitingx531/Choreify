@@ -6,6 +6,7 @@ import KanbanPage from './pages/KanbanPage.jsx';
 import GroupsPage from './pages/GroupsPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import NewGroupPage from './pages/NewGroupPage.jsx';
+import SignUpPage from './pages/SignUpPage.jsx';
 import { Routes, Route } from 'react-router-dom';
 import LoginPage from "./pages/LoginPage.jsx";
 /* eslint-disable import/extensions */
@@ -19,6 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/kanban" element={<KanbanPage />} />
           <Route path="/groups" element={<GroupsPage />} />
           <Route path="/profile" element={<ProfilePage />} />

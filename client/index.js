@@ -19,6 +19,6 @@ root.render(
       </BrowserRouter>
     </Provider>
   </div>
-)
+);
 store.dispatch(fetchChores);
 const { data, error, isLoading } = useGetAllChoresQuery();

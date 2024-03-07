@@ -16,7 +16,7 @@ export default function LoginPage() {
      
         <div id='signIn_signUp'>
         <Link to='/home' id='signIn_btn'><span>Sign In</span></Link>
-        <Link to='/' id='signUp_btn'><span>Sign Up</span></Link>
+        <Link to='/signup' id='signUp_btn'><span>Sign Up</span></Link>
         </div>
 
         <a id='forgot_password' href="https://www.w3schools.com">Forgot password?</a>

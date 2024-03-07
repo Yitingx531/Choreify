@@ -15,7 +15,6 @@ export default function GoogleOAuthButton() {
   const onLogOutSuccess = () => {
     console.log('Log out successfull');
   }
-  
 
   return (
     <div id="google_oAuth">

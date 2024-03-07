@@ -26,6 +26,7 @@ body {
     /* gap: 28px; */
 }
 
+/* LOGIN PAGE */
 body #login-page {
     background-image: url('./public/assets/SL-120722-54440-04.jpg');
     background-size: cover;
@@ -110,6 +111,7 @@ margin-bottom: 1rem;
     background-color:  #54707f;
     text-decoration: none;
 }
+
 #google_oAuth {
     display: flex;
     justify-content: space-around;
@@ -147,3 +149,61 @@ margin-bottom: 1rem;
     border-radius: 5vh;
     height: fit-content;
 }
+
+/* SIGNUP PAGE */
+body #signup-page {
+    background-image: url('./public/assets/SL-120722-54440-04.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+};
+
+#sign_up_card {
+    width: 18%;
+    height: 26rem;
+    background: #305972;
+    padding: 4rem;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	border-radius: 30px;
+	box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#sign_up_card form {
+margin-bottom: 1rem;
+}
+
+#sign_up_card p{
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: rgb(44, 44, 44);
+}
+
+#sign_up_card input {
+    width: 95%;
+    outline: none;
+    line-height: 1.2rem;
+    border: none;
+    &::placeholder {
+        color: hsl(0, 1%, 48%);
+        font-size: .9rem;
+    }
+}
+/* 
+#EmaiL, #password {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 15px;	
+} */
