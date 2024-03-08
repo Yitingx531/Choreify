@@ -5,26 +5,12 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//Logs all incoming request
-// app.use('*', (req, res, next) => {
-//   console.log(`
-//   #######\n
-//   URL: ${req.method} ${req.url}\n
-//   Params: ${JSON.stringify(req.params)}\n
-//   Body: ${JSON.stringify(req.body)}
-//   Req: ${req}
-//   #######
-//   `);
-//   next();
-// });
 
 // serve everything from the build folder
 app.use(express.static(path.join(__dirname, '../client/build')));
-// serve index.html to any get request on the path '/'
-// app.get('/', (req, res) => res.status(200).sendFile(path.join(__dirname, '../client/index.html')));
 
-// will send any calls to our page through our proxy server
-// app.use('/api', apiRouter);
+/* define route handler */
+app.use('/api', apiRouter);
 
 //catch all route
 app.use('*', (req, res) => {
