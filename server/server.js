@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const apiRouter = require('./routes/api');
 const app = express();
+const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -29,7 +30,7 @@ app.use('/', (err, req, res, next) => {
 });
 
 // Starts the server on port 3000
-app.listen(3000, (err) => {
+app.listen(PORT, (err) => {
   if (err) console.log('Error setting up server');
-  console.log('Choreify server running on 3000');
+  console.log(`Choreify server running on port ${PORT}`);
 });
