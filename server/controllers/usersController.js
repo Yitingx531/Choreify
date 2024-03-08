@@ -1,22 +1,10 @@
 const db = require("../models/connectToDB");
-const queries = require("../models/queries");
 
 const usersController = {};
 
-usersController.getUsers = (req, res, next) => {
-  db.query(queries.getAllUsers).then((data) => {
-    if (data) {
-      res.locals.payload = data.rows;
-      next();
-    } else {
-      next({ err: "Problem fetching users from database" });
-    }
-  });
-};
-
 usersController.postNewUser = (req, res, next) => {
   console.log("req.body ", req.body);
-  const { username, email, profile_picture } = req.body;
+  const { id, username, password } = req.body;
   const queryString = {
     text: `INSERT INTO USERS (username, email, profile_picture)
   VALUES ($1, $2, $3)
@@ -34,5 +22,16 @@ usersController.postNewUser = (req, res, next) => {
     }
   });
 };
+
+// usersController.getUsers = (req, res, next) => {
+//   db.query(queries.getAllUsers).then((data) => {
+//     if (data) {
+//       res.locals.payload = data.rows;
+//       next();
+//     } else {
+//       next({ err: "Problem fetching users from database" });
+//     }
+//   });
+// };
 
 module.exports = usersController;
