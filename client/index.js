@@ -20,5 +20,5 @@ root.render(
     </Provider>
   </div>
 );
-store.dispatch(fetchChores);
+// store.dispatch(fetchChores);
 const { data, error, isLoading } = useGetAllChoresQuery();
