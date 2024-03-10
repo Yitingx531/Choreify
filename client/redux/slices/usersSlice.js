@@ -1,19 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = [{
+  id: 0,
+  username: "",
+  password: ""
+}];
+
 const usersSlice = createSlice({
   name: "users",
-  initialState: {
-    isClicked: false
-  },
+  initialState,
   reducers: {
-      createUser: (state, action) => {
-      state.isClicked = true;
-    }
+    addNewUser: (state, action) => {
+      state.push(action.payload);
+    },
   },
 });
 
-// Extract the action creators object and the reducer
-const { actions, reducer } = usersSlice;
-export const { createUser } = actions;
-// Export the reducer, either as a default or named export
-export default reducer;
+export const selectAllUsers = (state) => state.users;
+export default usersSlice.reducer;
+export const { addNewUser } = usersSlice.actions;
