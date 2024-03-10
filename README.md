@@ -1,1 +1,1 @@
-Fullstack Software Engineer · A web platform developed to streamline task management, utilizing technologies such as JavaScript (JS), React, React Router, Redux Toolkit, Node.js/Express, SQL (PostgreSQL), and incorporating OAuth 2.0 protocols for secure authentication.
+A web platform developed to streamline task management, utilizing technologies such as JavaScript (JS), React, React Router, Redux Toolkit, Node.js/Express, SQL (PostgreSQL), and incorporating OAuth 2.0 protocols for secure authentication.
