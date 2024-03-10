@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addNewUser } from "../redux/slices/usersSlice";
+import { Link } from "react-router-dom";
 
 export default function SignUpPage(){
 
@@ -51,7 +52,7 @@ export default function SignUpPage(){
             <p htmlFor="password">Password</p>
             <input type="password"  id="password" placeholder="··················"/>
         </form>
-        <button id='sign_up_button' onClick={handleClick} > Sign Up </button>
+        <Link to='/home' ><button id='sign_up_button' onClick={handleClick} > Sign Up </button></Link>
           </div>
       </body>
     </>
