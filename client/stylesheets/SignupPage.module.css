@@ -1,29 +1,28 @@
 
 /* SIGNUP PAGE */
-body #signup-page {
-    /* background-image: url('./public/assets/SL-120722-54440-04.jpg'); */
-    /* background-size: cover;
+body #signup_page{
+    background-image: url('../../client/public/assets/SL-120722-54440-04.jpg');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     display: flex;
 	flex-direction: column;
     justify-content: center;
     align-items: center;
-};
+}
 
-#sign_up_card {
-    width: 100px;
-    height: 26rem;
+.sign_up_card{
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 50%;
     border: solid 1px red;
     background: #125077;
     padding: 4rem;
 	display: flex;
-	flex-direction: column;
-    justify-content: center;
+
 	border-radius: 30px;
 	box-shadow: 0 0 2em hsl(231deg 62% 94%);
-    min-width: 300px;
-    max-width: 400px;
 }
 
 #sign_up_card form {
@@ -58,8 +57,8 @@ margin-bottom: 1rem;
     border-radius: 15px;	
 } */
 
-#sign_up_button {
-    width: 4rem;
+button {
+    width: 9rem;
     padding: 1em;
     background: #7aa2b7;
     color: hsl(0, 0%, 100%);

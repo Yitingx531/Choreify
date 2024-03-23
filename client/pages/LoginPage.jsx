@@ -11,7 +11,7 @@ export default function LoginPage() {
             <p for="username">Username</p>
             <input type="text" id="username" placeholder="username or email"/>
             <p for="password">Password</p>
-            <input type="text" id="password" placeholder="··················"/>
+            <input type="password" id="password" placeholder="··················"/>
         </form>
      
         <div id='signIn_signUp'>

@@ -1,30 +1,29 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
     letter-spacing: .5px;
-}
+} 
 
-#swimLanes {
+/* #swimLanes {
     display: inline-flex;
     height: 991px;
     padding-bottom: 180px;
     align-items: flex-start;
     gap: 25px;
     flex-shrink: 0;
-}
+}  */
 
-#lane {
+/* #lane { */
     /* border: 1px solid black; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* background: #FFF; */
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
-    display: flex;
+    /* box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    display: flex; */
     /* width: 258px; */
-    padding: 15px;
+    /* padding: 15px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; */
     /* gap: 28px; */
-}
+/* } */
 
 /* LOGIN PAGE */
 body #login-page {
@@ -148,75 +147,4 @@ margin-bottom: 1rem;
     width: 80%;
     border-radius: 5vh;
     height: fit-content;
-}
-
-/* SIGNUP PAGE */
-body #signup-page {
-    /* background-image: url('./public/assets/SL-120722-54440-04.jpg'); */
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    display: flex;
-	flex-direction: column;
-    justify-content: center;
-    align-items: center;
-};
-
-#sign_up_card {
-    width: 100px;
-    height: 26rem;
-    border: solid 1px red;
-    background: #125077;
-    padding: 4rem;
-	display: flex;
-	flex-direction: column;
-    justify-content: center;
-	border-radius: 30px;
-	box-shadow: 0 0 2em hsl(231deg 62% 94%);
-    min-width: 300px;
-    max-width: 400px;
-}
-
-#sign_up_card form {
-margin-bottom: 1rem;
-}
-
-#sign_up_card p{
-    margin-bottom: .5rem;
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    color: rgb(44, 44, 44);
-}
-
-#sign_up_card input {
-    width: 95%;
-    outline: none;
-    line-height: 1.2rem;
-    border: none;
-    &::placeholder {
-        color: hsl(0, 1%, 48%);
-        font-size: .9rem;
-    }
-}
-/* 
-#EmaiL, #password {
-    background: hsl(0deg 0% 100%);
-    box-shadow: 0 0 2em hsl(231deg 62% 94%);
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 15px;	
-} */
-
-#sign_up_button {
-    width: 4rem;
-    padding: 1em;
-    background: #7aa2b7;
-    color: hsl(0, 0%, 100%);
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
 }

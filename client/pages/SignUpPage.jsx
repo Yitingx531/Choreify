@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addNewUser } from "../redux/slices/usersSlice";
 import { Link } from "react-router-dom";
+import styles from '../stylesheets/SignupPage.module.css'
 
 export default function SignUpPage(){
 
@@ -44,15 +45,17 @@ export default function SignUpPage(){
   console.log('isClicked', isClicked);
     return(
     <>
-    <body id='signup-page' style={{height: '100vh'}}>
-      <div id='sign_up_card'>
+    <body id='signup_page' style={{height: '100vh'}}>
+      <div class='sign_up_card'>
         <form id='signup_form'>
             <p htmlFor="Email">Email</p>
             <input type="Email" id="username" placeholder="example@mail.com"/>
             <p htmlFor="password">Password</p>
             <input type="password"  id="password" placeholder="··················"/>
         </form>
+        <div id="sign_up_btn_section">
         <Link to='/home' ><button id='sign_up_button' onClick={handleClick} > Sign Up </button></Link>
+        </div>
           </div>
       </body>
     </>
